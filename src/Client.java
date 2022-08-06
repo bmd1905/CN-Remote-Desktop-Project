@@ -166,7 +166,20 @@ public class Client
 
 
     public static void main(String[] args) throws IOException {
-        Client client = new Client("127.0.0.1", 5000);
+        while (true){
+            System.out.print("Please enter address: ");
+            Scanner obj = new Scanner(System.in);
+            String address = obj.nextLine();
+
+            if (address.equals("192.168.126.1")){
+                break;
+            }
+            else{
+                System.out.print("Address is not true. Please try agan!");
+            }
+        }
+
+        Client client = new Client("192.168.126.1", 5000);
 
         String clientOption = "";
         // Menu
